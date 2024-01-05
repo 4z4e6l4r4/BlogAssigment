@@ -1,0 +1,27 @@
+﻿@model Blog
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-12">
+            <div class="card p-3">
+                <h3>Edit Blog</h3>
+                <hr />
+                <form method="post">
+                    <textarea id="summernote" name="Description">@Html.Raw(Model.Description)</textarea>
+                    <input type="hidden" name="Id" id="Id" value="@Model.Id" />
+                    <input type="submit" class="btn btn-success" value="Edit Blog" />
+                </form>
+                <script>
+                    $(document).ready(function () {
+                        $('#summernote').summernote();
+                    });
+                </script>
+                <label style="color:orange">@ViewData["Message"]</label>
+            </div>
+        </div>
+    </div>
+</div>

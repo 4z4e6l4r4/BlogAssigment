@@ -1,0 +1,80 @@
+﻿@using FirstWebCoreApplication2.ViewModels;
+@model List<BlogViewModel>
+@{
+    ViewData["Title"] = "Index";
+    int i = 0;
+}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-12">
+            <div class="card p-3">
+                <h3>Blog List</h3>
+                <hr />
+                <table class="table table-hover table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Username</th>
+                            <th>Short Description</th>
+                            <th class="text-center">Comment Count</th>
+                            <th class="text-center">Like Count</th>
+                            <th class="text-center">Status</th>
+                            <th>Categories</th>
+                            <th>Settings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var blog in Model)
+                        {
+                            i++;
+                            <tr>
+                                <th>@i</th>
+                                <td>@blog.Name</td>
+                                <td>
+                                    <span class="badge bg-primary">
+                                        <i class="fa fa-user"></i> @blog.Username
+                                    </span>
+                                </td>
+                                <td>@blog.ShortDescription</td>
+                                <td class="text-center">
+                                    <span class="badge bg-warning">
+                                        @blog.CommentCount <i class="fa fa-comments"></i>
+                                    </span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="badge bg-danger">
+                                        @blog.LikeCount <i class="fa fa-heart"></i>
+                                    </span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="badge bg-@(blog.IsStatus?"success":"danger")">
+                                        @(blog.IsStatus ? "Active" : "Passive")
+                                    </span>
+                                </td>
+                                <td>
+                                    @foreach (var category in blog.Categories)
+                                    {
+                                         <span class="badge bg-secondary m-1">
+                                            @category.Name
+                                         </span>
+                                    }
+
+                                </td>
+                                <td>
+                                    <a class="btn btn-primary me-2 btn-sm" href="~/Blog/Edit/@blog.Id"><i class="fa fa-cogs"></i> Edit</a>
+                                    <a class="btn btn-danger btn-sm" href="~/Blog/Delete/@blog.Id"><i class="fa fa-trash"></i> Delete</a>
+                                </td>
+                            </tr>
+
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+

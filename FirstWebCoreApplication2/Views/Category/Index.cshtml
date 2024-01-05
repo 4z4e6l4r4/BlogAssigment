@@ -1,0 +1,14 @@
+﻿@model Task<List<Category>>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<ul>
+    <label style="color:orange">@TempData["Message"]</label>
+    @foreach (var item in await Model)
+    {
+        <li>@item.Name -  <a href="~/Category/Delete/@item.Id">Delete</a></li>
+    }
+</ul>
+
