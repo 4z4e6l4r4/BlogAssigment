@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LENOVO\\Desktop\\FirstWebCoreApplication2\\FirstWebCoreApplication2\\FirstWebCoreApplication2.csproj": {}
+    "C:\\Users\\LENOVO\\Documents\\GitHub\\BlogAssigment\\FirstWebCoreApplication2\\FirstWebCoreApplication2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LENOVO\\Desktop\\FirstWebCoreApplication2\\FirstWebCoreApplication2\\FirstWebCoreApplication2.csproj": {
+    "C:\\Users\\LENOVO\\Documents\\GitHub\\BlogAssigment\\FirstWebCoreApplication2\\FirstWebCoreApplication2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\FirstWebCoreApplication2\\FirstWebCoreApplication2\\FirstWebCoreApplication2.csproj",
+        "projectUniqueName": "C:\\Users\\LENOVO\\Documents\\GitHub\\BlogAssigment\\FirstWebCoreApplication2\\FirstWebCoreApplication2.csproj",
         "projectName": "FirstWebCoreApplication2",
-        "projectPath": "C:\\Users\\LENOVO\\Desktop\\FirstWebCoreApplication2\\FirstWebCoreApplication2\\FirstWebCoreApplication2.csproj",
+        "projectPath": "C:\\Users\\LENOVO\\Documents\\GitHub\\BlogAssigment\\FirstWebCoreApplication2\\FirstWebCoreApplication2.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\Desktop\\FirstWebCoreApplication2\\FirstWebCoreApplication2\\obj\\",
+        "outputPath": "C:\\Users\\LENOVO\\Documents\\GitHub\\BlogAssigment\\FirstWebCoreApplication2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",

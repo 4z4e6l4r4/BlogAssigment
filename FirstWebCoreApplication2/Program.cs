@@ -14,12 +14,18 @@ namespace FirstWebCoreApplication2
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            // Veritabaný baðlantýsý ekleme
             builder.Services.AddDbContext<ApplicationDbContext>(option =>
                 option.UseSqlServer(builder.Configuration.GetConnectionString("ApplicationDbConnection"))
             );
 
+            // Servis kayýtlarý
             builder.Services.AddTransient<ICategoryService, CategoryService>();
-            builder.Services.AddTransient<IBlogService,BlogService>();
+            builder.Services.AddTransient<IBlogService, BlogService>();
+
+            // Yeni eklenen servisler
+            builder.Services.AddTransient<ICommentService, CommentService>();
+            builder.Services.AddTransient<ILikeService, LikeService>();
 
             var app = builder.Build();
 

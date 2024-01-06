@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FirstWebCoreApplication2.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240102083846_createDb2")]
-    partial class createDb2
+    [Migration("20240106004515_newTrialDb")]
+    partial class newTrialDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -145,10 +145,17 @@ namespace FirstWebCoreApplication2.Migrations
                     b.Property<int>("BlogId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsRead")
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsStatus")

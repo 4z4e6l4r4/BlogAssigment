@@ -14,5 +14,6 @@ namespace FirstWebCoreApplication2.Models.Data
         public DbSet<BlogLike> BlogLike { get; set; }
         public DbSet<Comment> Comment { get; set; }
 
+
     }
 }

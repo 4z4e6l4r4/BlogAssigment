@@ -143,10 +143,17 @@ namespace FirstWebCoreApplication2.Migrations
                     b.Property<int>("BlogId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsRead")
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsStatus")

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U4atwfuz3vBCYr3g9T1ZBkQOwuHUgiCRq81eWuK5KgqOTqPSQnqDOwwze0XgJnu+RxWOZWkhJZLsQtBuGT6hZA==",
+  "dgSpecHash": "dkjGRjwm0Fc8UWdT816t8k1CEu5o+oj6rf/7M1xlwB1Xl1UzUcqVDyZdz0IFPRo/zNGIfTWl9bo5h52AqJ6Y5w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LENOVO\\Desktop\\FirstWebCoreApplication2\\FirstWebCoreApplication2\\FirstWebCoreApplication2.csproj",
+  "projectFilePath": "C:\\Users\\LENOVO\\Documents\\GitHub\\BlogAssigment\\FirstWebCoreApplication2\\FirstWebCoreApplication2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
