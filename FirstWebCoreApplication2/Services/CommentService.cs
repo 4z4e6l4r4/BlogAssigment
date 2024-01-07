@@ -21,7 +21,7 @@ namespace FirstWebCoreApplication2.Services
 
         public IEnumerable<Comment> GetCommentsForBlog(int blogId)
         {
-            return _context.Comment.Where(c => c.BlogId == blogId && !c.IsDelete).Include(m => m.User).ToList();
+            return _context.Comment.Where(c => c.BlogId == blogId && !c.IsDelete).Include(m => m.User).Include(c => c.Blog).ToList();
         }
 
         public bool ApproveComment(int id)

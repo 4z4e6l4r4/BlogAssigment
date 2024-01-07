@@ -17,16 +17,17 @@ namespace FirstWebCoreApplication2.Controllers
             return View(AllComments);
         }
 
-        public IActionResult Accept(int id) 
+        public IActionResult Accept(int id, int blogid) 
         { 
+
             commentService.ApproveComment(id);
-            return RedirectToAction("Index", new { id = id });
+            return RedirectToAction("Index", new { id = blogid });
         }
 
-        public IActionResult Delete(int id)
+        public IActionResult Delete(int id, int blogid)
         {
             commentService.DeleteComment(id);
-            return RedirectToAction("Index", new { id = id });
+            return RedirectToAction("Index", new { id = blogid });
         }
 
 

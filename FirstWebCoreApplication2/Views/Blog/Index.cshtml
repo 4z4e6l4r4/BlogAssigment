@@ -39,16 +39,19 @@
                                     </span>
                                 </td>
                                 <td>@blog.ShortDescription</td>
+
                                 <td class="text-center">
-                                    <span class="badge bg-warning">
+                                    <a class="badge bg-warning" href="~/Comment/Index/@blog.Id">
                                         @blog.CommentCount <i class="fa fa-comments"></i>
-                                    </span>
+                                    </a>
                                 </td>
+
                                 <td class="text-center">
-                                    <span class="badge bg-danger">
-                                        @blog.LikeCount <i class="fa fa-heart"></i>
-                                    </span>
+                                    <a class="badge bg-danger" href="~/Like/Index/?BlogId=@blog.Id">
+                                        @blog.LikeCount <i class="fa fa-heart"> </i>
+                                    </a>
                                 </td>
+
                                 <td class="text-center">
                                     <span class="badge bg-@(blog.IsStatus?"success":"danger")">
                                         @(blog.IsStatus ? "Active" : "Passive")
