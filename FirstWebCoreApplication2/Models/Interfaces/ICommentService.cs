@@ -6,7 +6,7 @@
         IEnumerable<Comment> GetCommentsForBlog(int blogId);
         bool ApproveComment(int id);
         bool DeleteComment(int id);
-        void UpdateComment(Comment comment);
+        //void UpdateComment(Comment comment);
     }
 
 }

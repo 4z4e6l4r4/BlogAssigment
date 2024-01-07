@@ -21,7 +21,7 @@ namespace FirstWebCoreApplication2.Services
 
         public IEnumerable<Comment> GetCommentsForBlog(int blogId)
         {
-            return _context.Comment.Where(c => c.BlogId == blogId && !c.IsDelete).ToList();
+            return _context.Comment.Where(c => c.BlogId == blogId && !c.IsDelete).Include(m => m.User).ToList();
         }
 
         public bool ApproveComment(int id)
@@ -48,10 +48,12 @@ namespace FirstWebCoreApplication2.Services
             return true;
         }
 
-        public void UpdateComment(Comment comment)
-        {
-            _context.Comment.Update(comment);
-            _context.SaveChanges();
-        }
+        //public void UpdateComment(Comment comment)
+        //{
+        //    _context.Comment.Update(comment);
+        //    _context.SaveChanges();
+        //}
+
+
     }
 }

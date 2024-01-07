@@ -1,0 +1,64 @@
+﻿@model IEnumerable<FirstWebCoreApplication2.Models.Comment>
+
+@{
+    ViewData["Title"] = "All Comments";
+
+}
+<div class="container">
+    <div class="row">
+
+        <div class="col-12">
+            <div class="card p-3">
+                <h3>Comment List</h3>
+                <hr />
+                <table class="table table-hover table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            
+                            <th>Username</th>
+                            <th class="text-center">Comment</th>
+                            <th class="text-center">Status</th>
+                            <th class="text-center">Read</th>
+                            <th>Settings</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var comment in Model)
+                        {
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge bg-primary">
+                                        <i class="fa fa-user"></i> @comment.User.Username
+                                    </span>
+                                </td>
+
+                                <td>@comment.Content</td>
+
+                                <td class="text-center">
+                                    <span class="badge bg-@(comment.IsStatus?"success":"danger")">
+                                        @(comment.IsStatus ? "Active" : "Passive")
+                                    </span>
+                                </td>
+
+                                <td class="text-center">
+                                    <span class="badge bg-@(comment.IsRead?"success":"danger")">
+                                        @(comment.IsRead ? "Active" : "Passive")
+                                    </span>
+                                </td>
+                               
+                                <td>
+                                    <a class="btn btn-primary me-2 btn-sm" href="~/Comment/Accept/@comment.Id"><i class="fa fa-cogs"></i> Accept</a>
+                                    <a class="btn btn-danger btn-sm" href="~/Comment/Delete/@comment.Id"><i class="fa fa-trash"></i> Delete</a>
+                                </td>
+                            </tr>
+
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>

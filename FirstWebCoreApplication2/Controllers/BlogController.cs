@@ -45,5 +45,7 @@ namespace FirstWebCoreApplication2.Controllers
             TempData["Message"] = result ? "Düzenleme Başarılı" : "Düzenleme Başarısız";
             return View(blog);
         }
+
+
     }
 }
